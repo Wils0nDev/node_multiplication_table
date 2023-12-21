@@ -17,7 +17,7 @@ export class ServerApp {
     static run({base,limit,showTable,name,destination} : RunOption){
     console.log('Server running...')
     const table = new CreateTable().excute({base,limit})
-    const wasCreated = new SaveFile().execute({fileContent: table, fileDestination: `${destination}/${name}-${base}`, fileName: name})
+    const wasCreated = new SaveFile().execute({fileContent: table, fileDestination: `${destination}`, fileName: name})
 
     if(showTable) console.log(table);
       (wasCreated) ? console.log('File created') :  console.log('File not created')

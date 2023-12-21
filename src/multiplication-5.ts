@@ -15,6 +15,7 @@ for (let i = 0; i <= limit ; i++) {
 }
 outputMessage = headerMessage + outputMessage
 const outputPath = `outputs/`
+//mkdirSync : crea mi directorio si en caso no esta creada
 fs.mkdirSync(outputPath, {recursive: true})
 fs.writeFileSync(`${outputPath}tabla-${base}.txt`,outputMessage)
 console.log('Archivo creado!')
