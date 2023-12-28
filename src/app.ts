@@ -4,6 +4,8 @@ import { ServerApp } from "./presentation/server-app";
 //console.log(process.env);
 //variables argument values
 //console.log(process.argv);
+// const [tsnode,app, ...args] = process.argv;
+// console.log(args)
 
 
 //Funcion anonima autoinvocada asincrona

@@ -1,5 +1,4 @@
 import yargs from 'yargs'
-import {hideBin} from 'yargs/helpers'
 
 //yargs y opciones de yargs
 export const yarg = yargs(process.argv)
@@ -32,6 +31,11 @@ export const yarg = yargs(process.argv)
     type: 'string',
     default: './outputs',
     describe: 'File destination'
+})
+.check((argv,options)=>{
+    if(argv.b < 1 ) throw 'Error : el balor de la base tiene que ser mayor a 0'
+
+    return true;
 })
 .parseSync()
 
